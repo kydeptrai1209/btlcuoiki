@@ -597,6 +597,42 @@
       "ngay_gui": "2025-06-10T09:52:09.587Z",
       "ghi_chu": "Tài khoản mới đăng ký",
       "to_hop_id": 0
+    },
+    {
+      "id": 110,
+      "ho_ten": "343",
+      "ngay_sinh": "2000-01-01",
+      "gioi_tinh": "Nữ",
+      "so_cccd": "323233333333",
+      "email": "2@gmail.com",
+      "sdt": "0000000009",
+      "diem_thi": 26,
+      "doi_tuong_uu_tien": "KV1",
+      "truong_id": 2,
+      "nganh_id": 6,
+      "file_minh_chung": "",
+      "trang_thai": "moi_dang_ky",
+      "ngay_gui": "2025-06-10T15:08:10.456Z",
+      "ghi_chu": "Tài khoản mới đăng ký",
+      "to_hop_id": 14
+    },
+    {
+      "id": 111,
+      "ho_ten": "43432",
+      "ngay_sinh": "2000-01-01",
+      "gioi_tinh": "Nam",
+      "so_cccd": "332432432444",
+      "email": "hihi@gmail.com",
+      "sdt": "0000000000",
+      "diem_thi": 0,
+      "doi_tuong_uu_tien": "",
+      "truong_id": 0,
+      "nganh_id": 0,
+      "file_minh_chung": "",
+      "trang_thai": "moi_dang_ky",
+      "ngay_gui": "2025-06-10T15:24:44.899Z",
+      "ghi_chu": "Tài khoản mới đăng ký",
+      "to_hop_id": 0
     }
   ],
   "admin": [

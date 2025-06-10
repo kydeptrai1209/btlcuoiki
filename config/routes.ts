@@ -88,6 +88,12 @@
 				icon: 'FileOutlined',
 			},
 			{
+				path: '/admin/statistics',
+				name: 'Thống kê hồ sơ',
+				component: './Admin/Statistics',
+				icon: 'BarChartOutlined',
+			},
+			{
 				path: '/admin/email-settings',
 				name: 'Cấu hình email',
 				component: './Admin/EmailSettings',

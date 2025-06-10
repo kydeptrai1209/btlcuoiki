@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 import { Card, Row, Col, Button, Spin } from 'antd';
-import { BankOutlined, FileOutlined, LogoutOutlined, MailOutlined } from '@ant-design/icons';
+import { BankOutlined, FileOutlined, LogoutOutlined, MailOutlined, BarChartOutlined } from '@ant-design/icons';
 import { useModel, history } from 'umi';
 import styles from './index.less';
 
@@ -35,6 +35,10 @@ const AdminDashboard: React.FC = () => {
   
   const goToEmailSettings = () => {
     history.push('/admin/email-settings');
+  };
+
+  const goToStatistics = () => {
+    history.push('/admin/statistics');
   };
 
   if (loading) {
@@ -116,6 +120,28 @@ const AdminDashboard: React.FC = () => {
               onClick={goToEmailSettings}
             >
               Cấu hình email
+            </Button>
+          </Card>
+        </Col>
+      </Row>
+      
+      <Row gutter={24} style={{ marginTop: 24 }}>
+        <Col span={8}>
+          <Card 
+            className={styles.dashboardCard} 
+            title="Thống kê hồ sơ"
+            extra={<BarChartOutlined style={{ fontSize: '24px', color: '#1890ff' }} />}
+          >
+            <p>Xem thống kê số lượng hồ sơ theo trường</p>
+            <p>Phân tích dữ liệu hồ sơ theo ngành học</p>
+            <p>Thống kê trạng thái xử lý hồ sơ</p>
+            <Button 
+              type="primary" 
+              size="large" 
+              style={{ marginTop: 16 }}
+              onClick={goToStatistics}
+            >
+              Xem thống kê
             </Button>
           </Card>
         </Col>
