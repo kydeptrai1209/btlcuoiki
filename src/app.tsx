@@ -101,6 +101,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 		noFound: <NotFoundContent />,
 		rightContentRender: () => <RightContent />,
 		disableContentMargin: false,
+		headerTitleRender: () => null,
 
 		footerRender: () => <Footer />,
 

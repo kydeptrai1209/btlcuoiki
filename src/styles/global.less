@@ -13,6 +13,215 @@ body,
 	-moz-osx-font-smoothing: grayscale;
 }
 
+// Loại bỏ khoảng trắng phía trên trang Admin nhưng giữ nguyên chức năng đăng xuất cho trang thí sinh
+.ant-layout-header.ant-pro-fixed-header {
+	height: 0 !important;
+	padding: 0 !important;
+	line-height: 0 !important;
+	overflow: hidden !important;
+}
+
+// Trong trang Admin, ẩn header hoàn toàn
+.ant-pro-global-header {
+	height: 0 !important;
+	padding: 0 !important;
+	line-height: 0 !important;
+	overflow: hidden !important;
+}
+
+// Ẩn logo header
+.ant-pro-global-header-logo {
+	display: none !important;
+}
+
+// Điều chỉnh bố cục cho trang quản trị
+.ant-pro-basicLayout-content {
+	margin: 0 !important;
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+// Điều chỉnh header trong layout (chỉ ở trang admin)
+.ant-layout .ant-layout-header {
+	height: 0 !important;
+	padding: 0 !important;
+}
+
+// Điều chỉnh khoảng cách trang
+.ant-page-header.has-breadcrumb {
+	padding-top: 0 !important;
+}
+
+// Ẩn hoàn toàn breadcrumb
+.ant-page-header-breadcrumb {
+	display: none !important;
+}
+
+// Ẩn hoàn toàn text phần trên cùng
+.ant-pro-top-nav-header-menu {
+	display: none !important;
+}
+
+.ant-pro-global-header-collapsed-button {
+	display: none !important;
+}
+
+.ant-page-header .ant-page-header-ghost {
+	display: none !important;
+}
+
+// Điều chỉnh container chính để ẩn phần top navigation
+.ant-pro-page-container-warp {
+	overflow: hidden !important;
+	padding-top: 0 !important;
+	margin-top: -40px !important; /* Kéo container lên cao hơn để che text */
+}
+
+.ant-page-header {
+	padding-top: 40px !important; /* Đẩy nội dung xuống để không bị che */
+}
+
+// Hiển thị nút đăng xuất trên trang thí sinh
+.ant-pro-page-container .ant-page-header-heading-extra {
+	display: flex !important;
+	justify-content: flex-end !important;
+	margin-left: auto !important;
+	position: relative !important;
+	z-index: 100 !important;
+	margin-top: 40px !important; /* Đưa nút đăng xuất xuống dưới một chút */
+}
+
+// Khôi phục đầu trang trong StudentPage
+.ant-page-header-heading {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	margin-top: 40px !important; /* Đẩy tiêu đề xuống thấp hơn để không bị che khuất */
+}
+
+// Đường dẫn /student, giữ lại header
+.ant-pro-page-container .ant-pro-page-container-warp {
+	display: block !important;
+}
+
+// Hiển thị đầy đủ menu bên trái
+.ant-layout-sider {
+	z-index: 100 !important;
+}
+
+.ant-menu-item {
+	height: auto !important;
+	line-height: 1.5 !important;
+	padding: 12px 16px !important;
+	white-space: normal !important;
+}
+
+.ant-pro-sider-menu {
+	padding-top: 10px !important;
+}
+
+// Hiển thị đầy đủ breadcrumb và menu thí sinh
+.ant-layout-sider .ant-menu-submenu-title {
+	height: auto !important;
+	line-height: 1.5 !important;
+	padding: 12px 16px !important;
+	white-space: normal !important;
+}
+
+.ant-menu-title-content {
+	white-space: normal !important;
+	line-height: 1.5 !important;
+}
+
+// Làm đẹp nút đăng xuất
+.ant-pro-page-container button[key="logout"],
+.ant-btn-primary.ant-btn-dangerous {
+	background: linear-gradient(45deg, #ff4d4f, #ff7875) !important;
+	border: none !important;
+	box-shadow: 0 2px 8px rgba(255, 77, 79, 0.35) !important;
+	transition: all 0.3s ease !important;
+}
+
+.ant-pro-page-container button[key="logout"]:hover,
+.ant-btn-primary.ant-btn-dangerous:hover {
+	background: linear-gradient(45deg, #ff7875, #ff4d4f) !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 4px 12px rgba(255, 77, 79, 0.45) !important;
+}
+
+// Làm đẹp trang Student Profile
+.ant-pro-page-container {
+	background: linear-gradient(135deg, #f0f5ff, #f6ffed) !important;
+}
+
+// Làm đẹp tiêu đề trang
+.ant-pro-page-container-warp {
+	background: linear-gradient(90deg, #1890ff, #52c41a) !important;
+	padding: 16px 24px !important;
+	border-radius: 0 0 8px 8px !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-pro-page-container-warp .ant-page-header-heading-title {
+	color: white !important;
+	font-size: 24px !important;
+	font-weight: 600 !important;
+}
+
+.ant-pro-page-container-warp .ant-page-header-heading-sub-title {
+	color: rgba(255, 255, 255, 0.85) !important;
+}
+
+// Làm đẹp card
+.ant-card {
+	border-radius: 8px !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+	transition: all 0.3s ease !important;
+}
+
+.ant-card:hover {
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+// Làm đẹp Steps
+.ant-steps .ant-steps-item-icon {
+	background: #fff !important;
+	border-color: #1890ff !important;
+}
+
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+	background: #1890ff !important;
+}
+
+.ant-steps-item-title {
+	font-weight: 600 !important;
+}
+
+// Làm đẹp Descriptions
+.ant-descriptions-bordered {
+	background: white !important;
+	border-radius: 8px !important;
+	overflow: hidden !important;
+}
+
+.ant-descriptions-bordered .ant-descriptions-item-label {
+	background-color: #f0f7ff !important;
+	font-weight: 600 !important;
+}
+
+// Làm đẹp button chỉnh sửa
+.ant-btn-primary {
+	background: linear-gradient(45deg, #1890ff, #52c41a) !important;
+	border: none !important;
+	box-shadow: 0 2px 8px rgba(24, 144, 255, 0.35) !important;
+}
+
+.ant-btn-primary:hover {
+	background: linear-gradient(45deg, #52c41a, #1890ff) !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 4px 12px rgba(24, 144, 255, 0.45) !important;
+}
+
 a {
 	position: relative;
 	word-break: break-word;

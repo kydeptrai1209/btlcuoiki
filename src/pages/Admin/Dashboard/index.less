@@ -1,28 +1,159 @@
 .dashboardCard {
-  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
   transition: all 0.3s;
-  min-height: 270px;
+  height: 100%;
   
   &:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     transform: translateY(-5px);
   }
 
-  :global {
-    .ant-card-head {
-      border-bottom: 1px solid #f0f0f0;
-      padding: 0 16px;
+  .ant-card-head {
+    border-bottom: 0;
+    
+    .ant-card-head-title {
+      font-weight: 600;
+      font-size: 16px;
     }
+  }
+  
+  p {
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
 
-    .ant-card-body {
-      padding: 20px;
+.dashboardHeader {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #1890ff, #52c41a);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 4px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .welcomeMessage {
+    font-size: 16px;
+    opacity: 0.9;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .statsRow {
+    display: flex;
+    margin-top: 16px;
+    z-index: 1;
+    position: relative;
+    
+    .statItem {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      margin-right: 12px;
       
-      p {
-        margin-bottom: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      .statValue {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      
+      .statLabel {
         font-size: 14px;
-        color: rgba(0, 0, 0, 0.65);
+        opacity: 0.8;
       }
     }
+  }
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  
+  &.blue {
+    background: rgba(24, 144, 255, 0.1);
+    
+    .anticon {
+      color: #1890ff;
+    }
+  }
+  
+  &.green {
+    background: rgba(82, 196, 26, 0.1);
+    
+    .anticon {
+      color: #52c41a;
+    }
+  }
+  
+  &.orange {
+    background: rgba(250, 173, 20, 0.1);
+    
+    .anticon {
+      color: #faad14;
+    }
+  }
+  
+  &.purple {
+    background: rgba(114, 46, 209, 0.1);
+    
+    .anticon {
+      color: #722ed1;
+    }
+  }
+  
+  .anticon {
+    font-size: 24px;
+  }
+}
+
+.logoutButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
   }
 } 

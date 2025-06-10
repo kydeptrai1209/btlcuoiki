@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input, Button, Typography, Tabs, Alert } from 'antd';
+import { Form, Input, Button, Typography, Tabs, Alert, Row, Col, Card } from 'antd';
 import { 
 	UserOutlined, 
 	SafetyOutlined, 
 	MailOutlined, 
 	BankOutlined, 
 	IdcardOutlined,
-	UserAddOutlined
+	UserAddOutlined,
+	CheckCircleOutlined,
+	BookOutlined,
+	TeamOutlined,
+	BarChartOutlined
 } from '@ant-design/icons';
 import { useModel, history } from 'umi';
 import styles from './index.less';
@@ -84,8 +88,59 @@ const Login: React.FC = () => {
 		registerForm.resetFields();
 	};
 
+	// Nội dung cho phần bên trái
+	const renderLeftContent = () => {
+		return (
+			<div className={styles.leftContent}>
+				<div className={styles.welcomeSection}>
+					<Title level={2} className={styles.welcomeTitle}>
+						Hệ Thống Tuyển Sinh Đại Học
+					</Title>
+					<Paragraph className={styles.welcomeDesc}>
+						Hỗ trợ thí sinh đăng ký xét tuyển và theo dõi trạng thái hồ sơ một cách thuận tiện
+					</Paragraph>
+				</div>
+				
+				<div className={styles.featureCards}>
+					<Row gutter={[16, 16]}>
+						<Col span={12}>
+							<Card className={styles.featureCard}>
+								<CheckCircleOutlined className={styles.featureIcon} />
+								<Title level={4}>Đăng Ký Xét Tuyển</Title>
+								<Paragraph>Đăng ký xét tuyển đại học nhanh chóng, dễ dàng</Paragraph>
+							</Card>
+						</Col>
+						<Col span={12}>
+							<Card className={styles.featureCard}>
+								<BookOutlined className={styles.featureIcon} />
+								<Title level={4}>Quản Lý Hồ Sơ</Title>
+								<Paragraph>Theo dõi trạng thái hồ sơ mọi lúc, mọi nơi</Paragraph>
+							</Card>
+						</Col>
+						<Col span={12}>
+							<Card className={styles.featureCard}>
+								<TeamOutlined className={styles.featureIcon} />
+								<Title level={4}>Danh Sách Trường</Title>
+								<Paragraph>Tra cứu thông tin các trường đại học, cao đẳng</Paragraph>
+							</Card>
+						</Col>
+						<Col span={12}>
+							<Card className={styles.featureCard}>
+								<BarChartOutlined className={styles.featureIcon} />
+								<Title level={4}>Thống Kê Tuyển Sinh</Title>
+								<Paragraph>Cập nhật thông tin tuyển sinh mới nhất</Paragraph>
+							</Card>
+						</Col>
+					</Row>
+				</div>
+			</div>
+		);
+	};
+
 	return (
 		<div className={styles.container}>
+			{renderLeftContent()}
+			
 			<div className={styles.main}>
 				<Title level={2} className={styles.formTitle}>
 					Hệ Thống Quản Lý Tuyển Sinh Đại Học
@@ -254,10 +309,6 @@ const Login: React.FC = () => {
 						</Form.Item>
 					</Form>
 				)}
-			</div>
-
-			<div className={styles.footer}>
-				<Text type="secondary">© 2024 Hệ Thống Quản Lý Tuyển Sinh. All Rights Reserved.</Text>
 			</div>
 		</div>
 	);

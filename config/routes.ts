@@ -23,6 +23,7 @@
 		name: 'Dashboard',
 		component: './TrangChu',
 		icon: 'HomeOutlined',
+		hideInMenu: true,
 	},
 	{
 		path: '/gioi-thieu',
@@ -35,6 +36,7 @@
 		name: 'RandomUser',
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
+		hideInMenu: true,
 	},
 
 	// Trang Sinh Viên

@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
-import { Card, Row, Col, Button, Spin } from 'antd';
-import { BankOutlined, FileOutlined, LogoutOutlined, MailOutlined, BarChartOutlined } from '@ant-design/icons';
+import { Card, Row, Col, Button, Spin, Statistic } from 'antd';
+import { BankOutlined, FileOutlined, LogoutOutlined, MailOutlined, BarChartOutlined, UserOutlined, CheckCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import { useModel, history } from 'umi';
 import styles from './index.less';
+import axios from 'axios';
+
+// Định nghĩa kiểu dữ liệu cho hồ sơ
+interface Application {
+  id: number;
+  trang_thai: string;
+  [key: string]: any;
+}
 
 const AdminDashboard: React.FC = () => {
   const { userInfo, userRole, isLoggedIn, checkLoginStatus, logout } = useModel('auth');
   const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState({
+    totalSchools: 0,
+    totalApplications: 0,
+    pendingApplications: 0
+  });
 
   // Kiểm tra đăng nhập
   useEffect(() => {
@@ -17,8 +30,29 @@ const AdminDashboard: React.FC = () => {
     } else {
       // Đã đăng nhập và là admin, hiển thị dashboard
       setLoading(false);
+      fetchStats();
     }
   }, []);
+
+  // Lấy số liệu thống kê
+  const fetchStats = async () => {
+    try {
+      const [schoolsRes, applicationsRes] = await Promise.all([
+        axios.get('http://localhost:3001/truong'),
+        axios.get<Application[]>('http://localhost:3001/ho_so')
+      ]);
+      
+      const pendingApps = applicationsRes.data.filter((app: Application) => app.trang_thai === 'cho_duyet');
+      
+      setStats({
+        totalSchools: schoolsRes.data.length,
+        totalApplications: applicationsRes.data.length,
+        pendingApplications: pendingApps.length
+      });
+    } catch (error) {
+      console.error('Lỗi khi tải dữ liệu thống kê:', error);
+    }
+  };
 
   // Xử lý đăng xuất
   const handleLogout = () => {
@@ -50,73 +84,100 @@ const AdminDashboard: React.FC = () => {
   }
 
   return (
-    <PageContainer
-      title="Trang quản trị hệ thống"
-      subTitle={`Xin chào, ${userInfo?.ho_ten || 'Quản trị viên'}`}
-      extra={[
-        <Button
-          key="1"
-          type="primary"
-          danger
-          icon={<LogoutOutlined />}
-          onClick={handleLogout}
-        >
-          Đăng xuất
-        </Button>,
-      ]}
-    >
-      <Row gutter={24}>
-        <Col span={8}>
-          <Card 
-            className={styles.dashboardCard} 
-            title="Quản lý trường"
-            extra={<BankOutlined style={{ fontSize: '24px', color: '#1890ff' }} />}
-          >
-            <p>Quản lý thông tin các trường đại học trong hệ thống</p>
-            <p>Thêm, sửa, xóa thông tin trường</p>
-            <p>Cập nhật thông tin chi tiết về trường và ngành học</p>
+    <div>
+      {/* Banner đẹp mắt ở đầu trang */}
+      <div className={styles.dashboardHeader}>
+        <h1>Trang quản trị hệ thống</h1>
+        <div className={styles.welcomeMessage}>Xin chào, {userInfo?.ho_ten || 'Quản trị viên'}</div>
+        
+        <div className={styles.statsRow}>
+          <div className={styles.statItem}>
+            <div className={styles.statValue}>{stats.totalSchools}</div>
+            <div className={styles.statLabel}>Trường đại học</div>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statValue}>{stats.totalApplications}</div>
+            <div className={styles.statLabel}>Tổng hồ sơ</div>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statValue}>{stats.pendingApplications}</div>
+            <div className={styles.statLabel}>Chờ duyệt</div>
+          </div>
+          <div className={styles.statItem}>
             <Button 
               type="primary" 
-              size="large" 
-              style={{ marginTop: 16 }}
+              className={styles.logoutButton}
+              icon={<LogoutOutlined />} 
+              onClick={handleLogout}
+            >
+              Đăng xuất
+            </Button>
+          </div>
+        </div>
+      </div>
+      
+      <Row gutter={24}>
+        <Col span={6}>
+          <Card className={styles.dashboardCard}>
+            <div className={`${styles.iconBox} ${styles.blue}`}>
+              <BankOutlined />
+            </div>
+            <h3>Quản lý trường</h3>
+            <p>Thêm, sửa, xóa thông tin trường và quản lý ngành học</p>
+            <Button 
+              type="primary" 
+              block
               onClick={goToSchoolManagement}
             >
               Quản lý trường
             </Button>
           </Card>
         </Col>
-        <Col span={8}>
-          <Card 
-            className={styles.dashboardCard} 
-            title="Quản lý hồ sơ"
-            extra={<FileOutlined style={{ fontSize: '24px', color: '#1890ff' }} />}
-          >
-            <p>Quản lý hồ sơ xét tuyển của thí sinh</p>
-            <p>Duyệt hồ sơ, xem thông tin chi tiết</p>
-            <p>Cập nhật trạng thái và ghi chú cho hồ sơ</p>
+        <Col span={6}>
+          <Card className={styles.dashboardCard}>
+            <div className={`${styles.iconBox} ${styles.green}`}>
+              <FileOutlined />
+            </div>
+            <h3>Quản lý hồ sơ</h3>
+            <p>Duyệt hồ sơ xét tuyển, cập nhật trạng thái và ghi chú</p>
             <Button 
               type="primary" 
-              size="large" 
-              style={{ marginTop: 16 }}
+              block
+              style={{ background: '#52c41a', borderColor: '#52c41a' }}
               onClick={goToApplicationManagement}
             >
               Quản lý hồ sơ
             </Button>
           </Card>
         </Col>
-        <Col span={8}>
-          <Card 
-            className={styles.dashboardCard} 
-            title="Cấu hình email"
-            extra={<MailOutlined style={{ fontSize: '24px', color: '#1890ff' }} />}
-          >
-            <p>Cấu hình dịch vụ gửi email thông báo</p>
-            <p>Kết nối với EmailJS để gửi email tự động</p>
-            <p>Kiểm tra gửi email thử nghiệm</p>
+        <Col span={6}>
+          <Card className={styles.dashboardCard}>
+            <div className={`${styles.iconBox} ${styles.orange}`}>
+              <BarChartOutlined />
+            </div>
+            <h3>Thống kê hồ sơ</h3>
+            <p>Phân tích dữ liệu theo trường, ngành học và trạng thái</p>
             <Button 
               type="primary" 
-              size="large" 
-              style={{ marginTop: 16 }}
+              block
+              style={{ background: '#faad14', borderColor: '#faad14' }}
+              onClick={goToStatistics}
+            >
+              Xem thống kê
+            </Button>
+          </Card>
+        </Col>
+        <Col span={6}>
+          <Card className={styles.dashboardCard}>
+            <div className={`${styles.iconBox} ${styles.purple}`}>
+              <MailOutlined />
+            </div>
+            <h3>Cấu hình email</h3>
+            <p>Thiết lập dịch vụ gửi email thông báo tự động</p>
+            <Button 
+              type="primary" 
+              block
+              style={{ background: '#722ed1', borderColor: '#722ed1' }}
               onClick={goToEmailSettings}
             >
               Cấu hình email
@@ -126,27 +187,33 @@ const AdminDashboard: React.FC = () => {
       </Row>
       
       <Row gutter={24} style={{ marginTop: 24 }}>
-        <Col span={8}>
+        <Col span={24}>
           <Card 
-            className={styles.dashboardCard} 
-            title="Thống kê hồ sơ"
-            extra={<BarChartOutlined style={{ fontSize: '24px', color: '#1890ff' }} />}
+            title={
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <ClockCircleOutlined style={{ marginRight: 8, color: '#faad14' }} />
+                <span>Hồ sơ chờ xử lý</span>
+              </div>
+            }
           >
-            <p>Xem thống kê số lượng hồ sơ theo trường</p>
-            <p>Phân tích dữ liệu hồ sơ theo ngành học</p>
-            <p>Thống kê trạng thái xử lý hồ sơ</p>
-            <Button 
-              type="primary" 
-              size="large" 
-              style={{ marginTop: 16 }}
-              onClick={goToStatistics}
-            >
-              Xem thống kê
-            </Button>
+            <div style={{ textAlign: 'center', padding: '20px 0' }}>
+              <Statistic 
+                value={stats.pendingApplications} 
+                suffix={`/ ${stats.totalApplications} hồ sơ`}
+                valueStyle={{ color: stats.pendingApplications > 0 ? '#faad14' : '#52c41a' }}
+              />
+              <Button 
+                type="primary" 
+                style={{ marginTop: 16 }}
+                onClick={goToApplicationManagement}
+              >
+                Xử lý ngay
+              </Button>
+            </div>
           </Card>
         </Col>
       </Row>
-    </PageContainer>
+    </div>
   );
 };
 
