@@ -3,9 +3,16 @@ import { PageContainer } from '@ant-design/pro-layout';
 import { Table, Button, Space, Card, Tag, message, Modal, Form, Input, Typography, Tabs, Badge } from 'antd';
 import { EyeOutlined, CheckOutlined, CloseOutlined, FileTextOutlined, ReloadOutlined } from '@ant-design/icons';
 import { useModel, history } from 'umi';
-import { getAllApplications, getApplicationById, updateApplicationStatus, HoSoType } from '@/services/Application';
-import { getSchoolById } from '@/services/School';
-import { getNganhByTruongId } from '@/services/Nganh';
+import { 
+  getAllApplications, 
+  getApplicationById, 
+  updateApplicationStatus, 
+  HoSoType,
+  getAllSchools,
+  TruongType, 
+  getAllMajors,
+  NganhType 
+} from '@/services/Application';
 import { sendApprovalEmail, sendRejectionEmail } from '@/services/Mail';
 
 const { TabPane } = Tabs;
@@ -45,28 +52,27 @@ const ApplicationManagement: React.FC = () => {
   const fetchSchoolsAndNganh = async () => {
     try {
       // Lấy danh sách trường
-      const schoolMap: {[key: number]: string} = {};
-      for (let i = 1; i <= 5; i++) {
-        const result = await getSchoolById(i);
-        if (result.success && result.data) {
-          schoolMap[i] = result.data.ten_truong;
-        }
+      const schoolResult = await getAllSchools();
+      if (schoolResult.success && schoolResult.data) {
+        const schoolMapData: {[key: number]: string} = {};
+        schoolResult.data.forEach((school: TruongType) => {
+          schoolMapData[school.id] = school.ten_truong;
+        });
+        setSchoolMap(schoolMapData);
       }
-      setSchoolMap(schoolMap);
 
       // Lấy danh sách ngành
-      const nganhMap: {[key: number]: string} = {};
-      for (let i = 1; i <= 5; i++) {
-        const result = await getNganhByTruongId(i);
-        if (result.success && result.data) {
-          result.data.forEach((nganh) => {
-            nganhMap[nganh.id] = nganh.ten_nganh;
-          });
-        }
+      const nganhResult = await getAllMajors();
+      if (nganhResult.success && nganhResult.data) {
+        const nganhMapData: {[key: number]: string} = {};
+        nganhResult.data.forEach((nganh: NganhType) => {
+          nganhMapData[nganh.id] = nganh.ten_nganh;
+        });
+        setNganhMap(nganhMapData);
       }
-      setNganhMap(nganhMap);
     } catch (error) {
       console.error("Error fetching schools and nganh:", error);
+      message.error('Không thể tải thông tin trường và ngành');
     }
   };
 

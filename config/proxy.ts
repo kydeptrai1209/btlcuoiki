@@ -17,6 +17,11 @@ export default {
       changeOrigin: true,
       pathRewrite: { '^/api': '' },
     },
+    '/json-server/': {
+      target: 'http://localhost:3001/',
+      changeOrigin: true,
+      pathRewrite: { '^/json-server': '' },
+    },
   },
   test: {
     '/v2.2/': {

@@ -1,35 +1,35 @@
 {
   "truong": [
     {
-      "id": 1,
+      "id": "1",
       "ma_truong": "DHKHTN",
       "ten_truong": "Đại học Khoa học Tự nhiên",
       "dia_chi": "227 Nguyễn Văn Cừ, Quận 5, TP.HCM",
       "loai_truong": "Công lập"
     },
     {
-      "id": 2,
+      "id": "2",
       "ma_truong": "DHBK",
       "ten_truong": "Đại học Bách Khoa",
       "dia_chi": "268 Lý Thường Kiệt, Quận 10, TP.HCM",
       "loai_truong": "Công lập"
     },
     {
-      "id": 3,
+      "id": "3",
       "ma_truong": "DHKT",
       "ten_truong": "Đại học Kinh Tế",
       "dia_chi": "59C Nguyễn Đình Chiểu, Quận 3, TP.HCM",
       "loai_truong": "Công lập"
     },
     {
-      "id": 4,
+      "id": "4",
       "ma_truong": "DHQT",
       "ten_truong": "Đại học Quốc Tế",
       "dia_chi": "Khu phố 6, Phường Linh Trung, Thủ Đức, TP.HCM",
       "loai_truong": "Công lập"
     },
     {
-      "id": 5,
+      "id": "5",
       "ma_truong": "DHCN",
       "ten_truong": "Đại học Công Nghệ",
       "dia_chi": "Khu phố 6, Phường Linh Trung, Thủ Đức, TP.HCM",
@@ -38,119 +38,119 @@
   ],
   "nganh": [
     {
-      "id": 1,
+      "id": "1",
       "truong_id": 1,
       "ma_nganh": "7480201",
       "ten_nganh": "Khoa học máy tính",
       "mo_ta": "Đào tạo chuyên sâu về lập trình, thuật toán, trí tuệ nhân tạo."
     },
     {
-      "id": 2,
+      "id": "2",
       "truong_id": 1,
       "ma_nganh": "7480101",
       "ten_nganh": "Khoa học dữ liệu",
       "mo_ta": "Tập trung vào xử lý dữ liệu lớn và phân tích thông minh."
     },
     {
-      "id": 3,
+      "id": "3",
       "truong_id": 1,
       "ma_nganh": "7480104",
       "ten_nganh": "Hệ thống thông tin",
       "mo_ta": "Nghiên cứu về thiết kế, phát triển và quản lý hệ thống thông tin."
     },
     {
-      "id": 4,
+      "id": "4",
       "truong_id": 1,
       "ma_nganh": "7480102",
       "ten_nganh": "Mạng máy tính và truyền thông",
       "mo_ta": "Chuyên về mạng máy tính, bảo mật và truyền thông dữ liệu."
     },
     {
-      "id": 5,
+      "id": "5",
       "truong_id": 2,
       "ma_nganh": "7480201",
       "ten_nganh": "Khoa học máy tính",
       "mo_ta": "Đào tạo kỹ sư phần mềm với nền tảng kỹ thuật vững chắc."
     },
     {
-      "id": 6,
+      "id": "6",
       "truong_id": 2,
       "ma_nganh": "7520201",
       "ten_nganh": "Kỹ thuật điện",
       "mo_ta": "Đào tạo chuyên gia về hệ thống điện và tự động hóa."
     },
     {
-      "id": 7,
+      "id": "7",
       "truong_id": 2,
       "ma_nganh": "7520103",
       "ten_nganh": "Kỹ thuật cơ khí",
       "mo_ta": "Thiết kế, phân tích và chế tạo các hệ thống cơ khí."
     },
     {
-      "id": 8,
+      "id": "8",
       "truong_id": 3,
       "ma_nganh": "7340101",
       "ten_nganh": "Quản trị kinh doanh",
       "mo_ta": "Phát triển năng lực quản lý và điều hành doanh nghiệp."
     },
     {
-      "id": 9,
+      "id": "9",
       "truong_id": 3,
       "ma_nganh": "7340201",
       "ten_nganh": "Tài chính - Ngân hàng",
       "mo_ta": "Chuyên về phân tích và quản lý tài chính, hoạt động ngân hàng."
     },
     {
-      "id": 10,
+      "id": "10",
       "truong_id": 3,
       "ma_nganh": "7310101",
       "ten_nganh": "Kinh tế học",
       "mo_ta": "Nghiên cứu các quy luật và chính sách kinh tế."
     },
     {
-      "id": 11,
+      "id": "11",
       "truong_id": 4,
       "ma_nganh": "7220201",
       "ten_nganh": "Ngôn ngữ Anh",
       "mo_ta": "Đào tạo chuyên gia ngôn ngữ Anh và văn hóa Anh-Mỹ."
     },
     {
-      "id": 12,
+      "id": "12",
       "truong_id": 4,
       "ma_nganh": "7340122",
       "ten_nganh": "Thương mại điện tử",
       "mo_ta": "Phát triển kỹ năng quản lý và vận hành kinh doanh trực tuyến."
     },
     {
-      "id": 13,
+      "id": "13",
       "truong_id": 4,
       "ma_nganh": "7340101",
       "ten_nganh": "Quản trị kinh doanh quốc tế",
       "mo_ta": "Đào tạo quản lý doanh nghiệp trong môi trường toàn cầu."
     },
     {
-      "id": 14,
+      "id": "14",
       "truong_id": 5,
       "ma_nganh": "7510201",
       "ten_nganh": "Công nghệ kỹ thuật cơ khí",
       "mo_ta": "Nghiên cứu và phát triển các hệ thống cơ khí hiện đại."
     },
     {
-      "id": 15,
+      "id": "15",
       "truong_id": 5,
       "ma_nganh": "7480201",
       "ten_nganh": "Công nghệ thông tin",
       "mo_ta": "Đào tạo kỹ sư công nghệ thông tin toàn diện."
     },
     {
-      "id": 16,
+      "id": "16",
       "truong_id": 5,
       "ma_nganh": "7510301",
       "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
       "mo_ta": "Chuyên về thiết kế và phát triển hệ thống điện tử."
     },
     {
-      "id": 17,
+      "id": "17",
       "truong_id": 1,
       "ma_nganh": "423",
       "ten_nganh": "432",
@@ -159,277 +159,277 @@
   ],
   "to_hop_xet_tuyen": [
     {
-      "id": 4,
+      "id": "4",
       "nganh_id": 2,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 5,
+      "id": "5",
       "nganh_id": 2,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 6,
+      "id": "6",
       "nganh_id": 2,
       "ma_to_hop": "D07",
       "cac_mon": "Toán+Hóa+Anh"
     },
     {
-      "id": 7,
+      "id": "7",
       "nganh_id": 3,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 8,
+      "id": "8",
       "nganh_id": 3,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 9,
+      "id": "9",
       "nganh_id": 4,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 10,
+      "id": "10",
       "nganh_id": 4,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 11,
+      "id": "11",
       "nganh_id": 5,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 12,
+      "id": "12",
       "nganh_id": 5,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 13,
+      "id": "13",
       "nganh_id": 6,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 14,
+      "id": "14",
       "nganh_id": 6,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 15,
+      "id": "15",
       "nganh_id": 7,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 16,
+      "id": "16",
       "nganh_id": 7,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 17,
+      "id": "17",
       "nganh_id": 8,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 18,
+      "id": "18",
       "nganh_id": 8,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 19,
+      "id": "19",
       "nganh_id": 8,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 20,
+      "id": "20",
       "nganh_id": 9,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 21,
+      "id": "21",
       "nganh_id": 9,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 22,
+      "id": "22",
       "nganh_id": 9,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 23,
+      "id": "23",
       "nganh_id": 10,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 24,
+      "id": "24",
       "nganh_id": 10,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 25,
+      "id": "25",
       "nganh_id": 10,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 26,
+      "id": "26",
       "nganh_id": 11,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 27,
+      "id": "27",
       "nganh_id": 11,
       "ma_to_hop": "D14",
       "cac_mon": "Văn+Anh+GDCD"
     },
     {
-      "id": 28,
+      "id": "28",
       "nganh_id": 12,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 29,
+      "id": "29",
       "nganh_id": 12,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 30,
+      "id": "30",
       "nganh_id": 12,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 31,
+      "id": "31",
       "nganh_id": 13,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 32,
+      "id": "32",
       "nganh_id": 13,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 33,
+      "id": "33",
       "nganh_id": 13,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 34,
+      "id": "34",
       "nganh_id": 14,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 35,
+      "id": "35",
       "nganh_id": 14,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 36,
+      "id": "36",
       "nganh_id": 15,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 37,
+      "id": "37",
       "nganh_id": 15,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 38,
+      "id": "38",
       "nganh_id": 15,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 39,
+      "id": "39",
       "nganh_id": 16,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 40,
+      "id": "40",
       "nganh_id": 16,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 41,
+      "id": "41",
       "nganh_id": 1,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 42,
+      "id": "42",
       "nganh_id": 1,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 43,
+      "id": "43",
       "nganh_id": 1,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 44,
+      "id": "44",
       "nganh_id": 1,
       "ma_to_hop": "D08",
       "cac_mon": "Toán+Sinh+Anh"
     },
     {
-      "id": 45,
+      "id": "45",
       "nganh_id": 17,
       "ma_to_hop": "A00",
       "cac_mon": "Toán+Lý+Hóa"
     },
     {
-      "id": 46,
+      "id": "46",
       "nganh_id": 17,
       "ma_to_hop": "A01",
       "cac_mon": "Toán+Lý+Anh"
     },
     {
-      "id": 47,
+      "id": "47",
       "nganh_id": 17,
       "ma_to_hop": "B00",
       "cac_mon": "Toán+Hóa+Sinh"
     },
     {
-      "id": 48,
+      "id": "48",
       "nganh_id": 17,
       "ma_to_hop": "D01",
       "cac_mon": "Toán+Văn+Anh"
     },
     {
-      "id": 49,
+      "id": "49",
       "nganh_id": 17,
       "ma_to_hop": "D08",
       "cac_mon": "Toán+Sinh+Anh"
@@ -437,7 +437,7 @@
   ],
   "ho_so": [
     {
-      "id": 101,
+      "id": "101",
       "ho_ten": "Nguyễn Văn A",
       "ngay_sinh": "2007-04-21",
       "gioi_tinh": "Nam",
@@ -455,7 +455,7 @@
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 102,
+      "id": "102",
       "ho_ten": "Trần Thị B",
       "ngay_sinh": "2007-08-15",
       "gioi_tinh": "Nữ",
@@ -473,7 +473,7 @@
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 103,
+      "id": "103",
       "ho_ten": "Lê Văn C",
       "ngay_sinh": "2007-12-03",
       "gioi_tinh": "Nam",
@@ -491,7 +491,7 @@
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 104,
+      "id": "104",
       "ho_ten": "Phạm Thị D",
       "ngay_sinh": "2007-06-12",
       "gioi_tinh": "Nữ",
@@ -509,7 +509,7 @@
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 105,
+      "id": "105",
       "ho_ten": "Hoàng Văn E",
       "ngay_sinh": "2007-09-28",
       "gioi_tinh": "Nam",
@@ -522,12 +522,12 @@
       "nganh_id": 11,
       "to_hop_id": 27,
       "file_minh_chung": "uploads/hoc_ba_105.pdf,uploads/cccd_105.jpg",
-      "trang_thai": "cho_duyet",
+      "trang_thai": "da_duyet",
       "ngay_gui": "2025-05-18T11:20:00",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 106,
+      "id": "106",
       "ho_ten": "Ngô Thị F",
       "ngay_sinh": "2007-02-17",
       "gioi_tinh": "Nữ",
@@ -540,12 +540,12 @@
       "nganh_id": 14,
       "to_hop_id": 34,
       "file_minh_chung": "uploads/hoc_ba_106.pdf,uploads/cccd_106.jpg",
-      "trang_thai": "tu_choi",
+      "trang_thai": "cho_duyet",
       "ngay_gui": "2025-05-19T13:15:00",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 107,
+      "id": "107",
       "ho_ten": "phạm xuan ky",
       "ngay_sinh": "2000-02-19",
       "gioi_tinh": "Nam",
@@ -558,30 +558,30 @@
       "nganh_id": 2,
       "to_hop_id": 4,
       "file_minh_chung": "uploads/d1tw97vv6ov51.jpg",
-      "trang_thai": "tu_choi",
+      "trang_thai": "da_duyet",
       "ngay_gui": "2025-06-10T07:52:20.622Z",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
     {
-      "id": 108,
+      "id": "108",
       "ho_ten": "kydeptrai",
       "ngay_sinh": "2000-01-01",
       "gioi_tinh": "Nam",
       "so_cccd": "213123123213",
       "email": "155@gmail.com",
-      "sdt": "0000000000",
-      "diem_thi": 0,
-      "doi_tuong_uu_tien": "",
-      "truong_id": 0,
-      "nganh_id": 0,
+      "sdt": "0000000033",
+      "diem_thi": 30,
+      "doi_tuong_uu_tien": "KV1",
+      "truong_id": 2,
+      "nganh_id": 6,
       "file_minh_chung": "",
-      "trang_thai": "moi_dang_ky",
+      "trang_thai": "cho_duyet",
       "ngay_gui": "2025-06-10T09:44:24.037Z",
-      "ghi_chu": "Tài khoản mới đăng ký",
-      "to_hop_id": 0
+      "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt",
+      "to_hop_id": 13
     },
     {
-      "id": 109,
+      "id": "109",
       "ho_ten": "3432432",
       "ngay_sinh": "2000-01-01",
       "gioi_tinh": "Nam",
@@ -593,15 +593,33 @@
       "truong_id": 0,
       "nganh_id": 0,
       "file_minh_chung": "",
-      "trang_thai": "moi_dang_ky",
+      "trang_thai": "cho_duyet",
       "ngay_gui": "2025-06-10T09:52:09.587Z",
-      "ghi_chu": "Tài khoản mới đăng ký",
+      "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt",
+      "to_hop_id": 0
+    },
+    {
+      "id": "110",
+      "ho_ten": "gggg",
+      "ngay_sinh": "2000-01-01",
+      "gioi_tinh": "Nam",
+      "so_cccd": "434343434344",
+      "email": "g@gmail.com",
+      "sdt": "0000000000",
+      "diem_thi": 0,
+      "doi_tuong_uu_tien": "",
+      "truong_id": 0,
+      "nganh_id": 0,
+      "file_minh_chung": "",
+      "trang_thai": "cho_duyet",
+      "ngay_gui": "2025-06-10T10:08:55.935Z",
+      "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt",
       "to_hop_id": 0
     }
   ],
   "admin": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "admin123",
       "ho_ten": "Quản Trị Viên",

@@ -94,6 +94,12 @@
 				icon: 'MailOutlined',
 			},
 			{
+				path: '/admin/statistics',
+				name: 'Thống kê hồ sơ',
+				component: './Admin/Statistics',
+				icon: 'BarChartOutlined',
+			},
+			{
 				path: '/admin',
 				redirect: '/admin/dashboard',
 			},

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 import { Card, Row, Col, Button, Spin } from 'antd';
-import { BankOutlined, FileOutlined, LogoutOutlined, MailOutlined } from '@ant-design/icons';
+import { BankOutlined, FileOutlined, LogoutOutlined, MailOutlined, BarChartOutlined } from '@ant-design/icons';
 import { useModel, history } from 'umi';
 import styles from './index.less';
 
@@ -37,6 +37,10 @@ const AdminDashboard: React.FC = () => {
     history.push('/admin/email-settings');
   };
 
+  const goToStatistics = () => {
+    history.push('/admin/statistics');
+  };
+
   if (loading) {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -61,8 +65,8 @@ const AdminDashboard: React.FC = () => {
         </Button>,
       ]}
     >
-      <Row gutter={24}>
-        <Col span={8}>
+      <Row gutter={[24, 24]}>
+        <Col xs={24} sm={24} md={12} lg={8}>
           <Card 
             className={styles.dashboardCard} 
             title="Quản lý trường"
@@ -81,7 +85,7 @@ const AdminDashboard: React.FC = () => {
             </Button>
           </Card>
         </Col>
-        <Col span={8}>
+        <Col xs={24} sm={24} md={12} lg={8}>
           <Card 
             className={styles.dashboardCard} 
             title="Quản lý hồ sơ"
@@ -100,7 +104,7 @@ const AdminDashboard: React.FC = () => {
             </Button>
           </Card>
         </Col>
-        <Col span={8}>
+        <Col xs={24} sm={24} md={12} lg={8}>
           <Card 
             className={styles.dashboardCard} 
             title="Cấu hình email"
@@ -116,6 +120,25 @@ const AdminDashboard: React.FC = () => {
               onClick={goToEmailSettings}
             >
               Cấu hình email
+            </Button>
+          </Card>
+        </Col>
+        <Col xs={24} sm={24} md={12} lg={8}>
+          <Card 
+            className={styles.dashboardCard} 
+            title="Thống kê hồ sơ"
+            extra={<BarChartOutlined style={{ fontSize: '24px', color: '#1890ff' }} />}
+          >
+            <p>Xem thống kê số lượng hồ sơ theo trường/ngành</p>
+            <p>Xem thống kê số lượng hồ sơ theo trạng thái</p>
+            <p>Tra cứu và tìm kiếm hồ sơ nhanh chóng</p>
+            <Button 
+              type="primary" 
+              size="large" 
+              style={{ marginTop: 16 }}
+              onClick={goToStatistics}
+            >
+              Xem thống kê
             </Button>
           </Card>
         </Col>
