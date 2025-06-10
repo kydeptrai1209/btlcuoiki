@@ -100,6 +100,8 @@ const Login: React.FC = () => {
 					onChange={handleTabChange}
 					tabBarStyle={{ borderBottom: '1px solid #f0f0f0', marginBottom: 24 }}
 					activeKey={activeTab}
+					type="line"
+					size="large"
 				>
 					<TabPane 
 						tab={
@@ -137,22 +139,6 @@ const Login: React.FC = () => {
 							<>
 								<div>Sử dụng <Text strong>Email</Text> hoặc <Text strong>Số CCCD</Text> để đăng nhập.</div>
 								<div>Mật khẩu mặc định là <Text strong>số CCCD</Text> của bạn.</div>
-							</>
-						}
-						type="info"
-						showIcon
-						style={{ marginBottom: 24 }}
-					/>
-				)}
-
-				{activeTab === '3' && (
-					<Alert
-						message="Thông tin đăng ký thí sinh"
-						description={
-							<>
-								<div>Vui lòng điền đầy đủ thông tin để đăng ký tài khoản.</div>
-								<div>Số CCCD sẽ được dùng làm mật khẩu đăng nhập của bạn.</div>
-								<div>Sau khi đăng ký thành công, bạn có thể đăng nhập bằng <Text strong>Email</Text> hoặc <Text strong>Số CCCD</Text>.</div>
 							</>
 						}
 						type="info"
@@ -236,13 +222,13 @@ const Login: React.FC = () => {
 						>
 							<Input
 								prefix={<MailOutlined className={styles.prefixIcon} />}
-								placeholder="Nhập email"
+								placeholder="Nhập email liên hệ"
 							/>
 						</Form.Item>
 
 						<Form.Item
 							name="so_cccd"
-							label="Số CCCD (dùng làm mật khẩu)"
+							label="Số CCCD (dùng làm mật khẩu đăng nhập)"
 							rules={[
 								{ required: true, message: 'Vui lòng nhập số CCCD!' },
 								{ pattern: /^[0-9]{12}$/, message: 'Số CCCD phải đủ 12 chữ số!' }
@@ -250,7 +236,7 @@ const Login: React.FC = () => {
 						>
 							<Input
 								prefix={<IdcardOutlined className={styles.prefixIcon} />}
-								placeholder="Nhập số CCCD"
+								placeholder="Nhập số CCCD (12 chữ số)"
 							/>
 						</Form.Item>
 
