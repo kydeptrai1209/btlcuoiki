@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "16.20.0" 
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://my-json-server.typicode.com/kydeptrai1209/btlcuoiki/:splat"
+  status = 200
+  force = true 
