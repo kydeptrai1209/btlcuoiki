@@ -34,6 +34,20 @@
       "ten_truong": "Đại học Công Nghệ",
       "dia_chi": "Khu phố 6, Phường Linh Trung, Thủ Đức, TP.HCM",
       "loai_truong": "Công lập"
+    },
+    {
+      "id": "6",
+      "ma_truong": "re",
+      "ten_truong": "rưer",
+      "dia_chi": "ưer",
+      "loai_truong": "Dân lập"
+    },
+    {
+      "id": "7",
+      "ma_truong": "3432",
+      "ten_truong": "432",
+      "dia_chi": "423",
+      "loai_truong": "Công lập"
     }
   ],
   "nganh": [
@@ -155,6 +169,76 @@
       "ma_nganh": "423",
       "ten_nganh": "432",
       "mo_ta": "432432"
+    },
+    {
+      "id": "968f",
+      "truong_id": null,
+      "ma_nganh": "321",
+      "ten_nganh": "3213",
+      "mo_ta": "312321"
+    },
+    {
+      "id": "9137",
+      "truong_id": null,
+      "ma_nganh": "34",
+      "ten_nganh": "4234",
+      "mo_ta": "23423"
+    },
+    {
+      "id": "1097",
+      "truong_id": null,
+      "ma_nganh": "34",
+      "ten_nganh": "4234",
+      "mo_ta": "23423"
+    },
+    {
+      "id": "50d7",
+      "truong_id": null,
+      "ma_nganh": "432",
+      "ten_nganh": "4324234",
+      "mo_ta": "432423432423"
+    },
+    {
+      "id": "7b96",
+      "truong_id": null,
+      "ma_nganh": "34",
+      "ten_nganh": "23432",
+      "mo_ta": "423"
+    },
+    {
+      "id": "c7a9",
+      "truong_id": "55ca",
+      "ma_nganh": "23432",
+      "ten_nganh": "23432423",
+      "mo_ta": "443"
+    },
+    {
+      "id": "d214",
+      "truong_id": "55ca",
+      "ma_nganh": "32432",
+      "ten_nganh": "4234",
+      "mo_ta": "23423"
+    },
+    {
+      "id": "6cf2",
+      "truong_id": "55ca",
+      "ma_nganh": "3423",
+      "ten_nganh": "423",
+      "mo_ta": "4234324"
+    },
+    {
+      "id": 9138,
+      "truong_id": 6,
+      "ma_nganh": "33",
+      "ten_nganh": "4324",
+      "mo_ta": "234"
+    },
+    {
+      "id": "9139",
+      "truong_id": 7,
+      "ma_nganh": "4324",
+      "ten_nganh": "32",
+      "mo_ta": "423"
     }
   ],
   "to_hop_xet_tuyen": [
@@ -433,6 +517,60 @@
       "nganh_id": 17,
       "ma_to_hop": "D08",
       "cac_mon": "Toán+Sinh+Anh"
+    },
+    {
+      "id": "50",
+      "nganh_id": 9139,
+      "ma_to_hop": "A01",
+      "cac_mon": "Toán+Lý+Anh",
+      "ten_to_hop": "A01",
+      "diem_san": 18,
+      "chi_tieu": 50
+    },
+    {
+      "id": "51",
+      "nganh_id": 9139,
+      "ma_to_hop": "B00",
+      "cac_mon": "Toán+Hóa+Sinh",
+      "ten_to_hop": "B00",
+      "diem_san": 18,
+      "chi_tieu": 50
+    },
+    {
+      "id": "52",
+      "nganh_id": 9139,
+      "ma_to_hop": "D01",
+      "cac_mon": "Toán+Văn+Anh",
+      "ten_to_hop": "D01",
+      "diem_san": 18,
+      "chi_tieu": 50
+    },
+    {
+      "id": "53",
+      "nganh_id": 9138,
+      "ma_to_hop": "A01",
+      "cac_mon": "Toán+Lý+Anh",
+      "ten_to_hop": "A01",
+      "diem_san": 18,
+      "chi_tieu": 50
+    },
+    {
+      "id": "54",
+      "nganh_id": 9138,
+      "ma_to_hop": "C00",
+      "cac_mon": "Văn+Sử+Địa",
+      "ten_to_hop": "C00",
+      "diem_san": 18,
+      "chi_tieu": 50
+    },
+    {
+      "id": "55",
+      "nganh_id": 9138,
+      "ma_to_hop": "D07",
+      "cac_mon": "Toán+Hóa+Anh",
+      "ten_to_hop": "D07",
+      "diem_san": 18,
+      "chi_tieu": 50
     }
   ],
   "ho_so": [
