@@ -155,6 +155,20 @@
       "ma_nganh": "423",
       "ten_nganh": "432",
       "mo_ta": "432432"
+    },
+    {
+      "id": 18,
+      "truong_id": 1,
+      "ma_nganh": "423",
+      "ten_nganh": "423",
+      "mo_ta": "42"
+    },
+    {
+      "id": 19,
+      "truong_id": 1,
+      "ma_nganh": "4324",
+      "ten_nganh": "23423",
+      "mo_ta": "42342"
     }
   ],
   "to_hop_xet_tuyen": [
@@ -433,6 +447,42 @@
       "nganh_id": 17,
       "ma_to_hop": "D08",
       "cac_mon": "Toán+Sinh+Anh"
+    },
+    {
+      "id": 50,
+      "nganh_id": 18,
+      "ma_to_hop": "A01",
+      "cac_mon": "Toán+Lý+Anh"
+    },
+    {
+      "id": 51,
+      "nganh_id": 18,
+      "ma_to_hop": "A03",
+      "cac_mon": "Toán+Lý+Văn"
+    },
+    {
+      "id": 52,
+      "nganh_id": 18,
+      "ma_to_hop": "B01",
+      "cac_mon": "Toán+Hóa+Anh"
+    },
+    {
+      "id": 53,
+      "nganh_id": 19,
+      "ma_to_hop": "C02",
+      "cac_mon": "Văn+Toán+Hóa"
+    },
+    {
+      "id": 54,
+      "nganh_id": 19,
+      "ma_to_hop": "C03",
+      "cac_mon": "Văn+Toán+Sử"
+    },
+    {
+      "id": 55,
+      "nganh_id": 19,
+      "ma_to_hop": "D01",
+      "cac_mon": "Toán+Văn+Anh"
     }
   ],
   "ho_so": [
@@ -486,7 +536,7 @@
       "nganh_id": 5,
       "to_hop_id": 11,
       "file_minh_chung": "uploads/hoc_ba_103.pdf,uploads/cccd_103.jpg",
-      "trang_thai": "cho_duyet",
+      "trang_thai": "tu_choi",
       "ngay_gui": "2025-05-16T09:10:00",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
@@ -504,7 +554,7 @@
       "nganh_id": 8,
       "to_hop_id": 17,
       "file_minh_chung": "uploads/hoc_ba_104.pdf,uploads/cccd_104.jpg",
-      "trang_thai": "cho_duyet",
+      "trang_thai": "tu_choi",
       "ngay_gui": "2025-05-17T16:45:00",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
@@ -522,9 +572,9 @@
       "nganh_id": 11,
       "to_hop_id": 27,
       "file_minh_chung": "uploads/hoc_ba_105.pdf,uploads/cccd_105.jpg",
-      "trang_thai": "cho_duyet",
+      "trang_thai": "tu_choi",
       "ngay_gui": "2025-05-18T11:20:00",
-      "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
+      "ghi_chu": "không đủ điểm"
     },
     {
       "id": 106,
@@ -540,7 +590,7 @@
       "nganh_id": 14,
       "to_hop_id": 34,
       "file_minh_chung": "uploads/hoc_ba_106.pdf,uploads/cccd_106.jpg",
-      "trang_thai": "cho_duyet",
+      "trang_thai": "da_duyet",
       "ngay_gui": "2025-05-19T13:15:00",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt"
     },
@@ -633,6 +683,24 @@
       "ngay_gui": "2025-06-10T15:24:44.899Z",
       "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt",
       "to_hop_id": 0
+    },
+    {
+      "id": 112,
+      "ho_ten": "Phạm Xuân Kỳ",
+      "ngay_sinh": "2000-01-01",
+      "gioi_tinh": "Nam",
+      "so_cccd": "123456789888",
+      "email": "phamky12345@gmail.com",
+      "sdt": "0000000000",
+      "diem_thi": 0,
+      "doi_tuong_uu_tien": "",
+      "truong_id": 1,
+      "nganh_id": 1,
+      "file_minh_chung": "uploads/t1-2024-jayce-orianna-lee-sin-jinx-bard-skins-lol-splash-art-hd-wallpaper-uhdpaper.com-327@2@a.jpg",
+      "trang_thai": "cho_duyet",
+      "ngay_gui": "2025-06-11T02:10:49.313Z",
+      "ghi_chu": "Hồ sơ đã được reset về trạng thái chờ duyệt",
+      "to_hop_id": 41
     }
   ],
   "admin": [

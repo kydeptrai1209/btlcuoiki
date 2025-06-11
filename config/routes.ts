@@ -53,6 +53,24 @@
 				icon: 'ProfileOutlined',
 			},
 			{
+				path: '/student/notifications',
+				name: 'Thông báo',
+				component: './Student',
+				icon: 'BellOutlined',
+			},
+			{
+				path: '/student/news',
+				name: 'Tin tức',
+				component: './Student',
+				icon: 'ReadOutlined',
+			},
+			{
+				path: '/student/faq',
+				name: 'Hỏi Đáp',
+				component: './Student',
+				icon: 'QuestionCircleOutlined',
+			},
+			{
 				path: '/student',
 				redirect: '/student/profile',
 			},
